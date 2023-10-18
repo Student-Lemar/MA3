@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    // Schema: UserName,Last,First,Email,NumTweets,MostViewedCategory
+    // Schema: UserName, Last, First, Email, NumTweets, MostViewedCategory
     string raw_data[5][6] = {{"rangerPower", "Smit", "Rick", "smitRick@gmail.com", "1117", "power lifting"},
                              {"kittyKat72", "Smith", "Kathryn", "kat@gmail.com", "56", "health"},
                              {"lexi5", "Anderson", "Alexis", "lexi5@gmail.com", "900", "education"},
@@ -24,6 +24,27 @@ int main(int argc, char *argv[])
     //
     // Your code goes here
     //
+    map<string, string> first;
+    for (int i = 0, i < 5, ++i){
+       first.insert(pair<string, string> (twitter_data[i].getUserName(),  twitter_data[i].getActualName + " " + twitter_data[i].getEmail() + " " twitter_data[i].getCategory() + " " + twitter_data[i].getNumTweets
+    };
 
+    for (map<string, string>::iterator i = first.begin(); i != first.end(); ++i) {
+        cout << (*first).first + " " + (*first).second << endl;
+    }
+    cout << "savage1" + " " + first["savage1"] << endl;
+    first.erase("savage1");;
+
+    map<string, string> second;
+    for (int i = 0, i < 5, ++i){
+       first.insert(pair<string, string> (twitter_data[i].getEmail(),  twitter_data[i].getUserName() + " " + twitter_data[i].getActualName + " " twitter_data[i].getCategory() + " " + twitter_data[i].getNumTweets
+    };
+
+    for (map<string, string>::iterator i = second.begin(); i != second.end(); ++i) {
+        cout << (*second).first + " " + (*second).second << endl;
+    }
+    cout << "kat@gmail.com" + " " + second["kat@gmail.com"] << end1;
+    second.erase("kat@gmail.com");
+};
 
     return 0;
